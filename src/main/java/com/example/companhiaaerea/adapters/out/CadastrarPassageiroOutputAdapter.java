@@ -1,7 +1,7 @@
 package com.example.companhiaaerea.adapters.out;
 
-import com.example.companhiaaerea.application.core.domain.Passageiro;
-import com.example.companhiaaerea.application.core.repository.PassageiroRepository;
+import com.example.companhiaaerea.adapters.out.repositories.PassageiroJpaRepositoryAdapter;
+import com.example.companhiaaerea.adapters.out.repositories.entities.PassageiroEntity;
 import com.example.companhiaaerea.application.ports.out.CadastrarPassageiroOutputPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -10,10 +10,9 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class CadastrarPassageiroOutputAdapter implements CadastrarPassageiroOutputPort {
 
-    private final PassageiroRepository passageiroRepository;
+    private final PassageiroJpaRepositoryAdapter passageiroRepository;
 
-    @Override
-    public void execute(Passageiro passageiro) {
+    public void execute(PassageiroEntity passageiro) {
         passageiroRepository.save(passageiro);
     }
 }
