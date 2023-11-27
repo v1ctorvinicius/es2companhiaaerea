@@ -1,6 +1,6 @@
 package com.example.companhiaaerea.reserva.application.core.domain;
 
-import com.example.companhiaaerea.application.core.domain.Passageiro;
+import com.example.companhiaaerea.passageiro.application.core.domain.Passageiro;
 import com.example.companhiaaerea.reserva.adapters.out.repositories.entities.ReservaEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

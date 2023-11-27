@@ -1,4 +1,4 @@
-package com.example.companhiaaerea.application.ports.in;
+package com.example.companhiaaerea.reserva.application.ports.in;
 
 import com.example.companhiaaerea.reserva.application.core.domain.Reserva;
 

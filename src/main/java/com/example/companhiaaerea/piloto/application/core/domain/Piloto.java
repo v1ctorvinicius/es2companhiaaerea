@@ -1,6 +1,6 @@
 package com.example.companhiaaerea.piloto.application.core.domain;
 
-import com.example.companhiaaerea.application.core.domain.Pessoa;
+import com.example.companhiaaerea.pessoa.application.core.domain.Pessoa;
 import lombok.Data;
 
 @Data

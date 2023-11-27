@@ -1,4 +1,4 @@
-package com.example.companhiaaerea.application.core.domain;
+package com.example.companhiaaerea.voo.application.core.domain;
 
 import com.example.companhiaaerea.piloto.application.core.domain.Piloto;
 import lombok.Data;

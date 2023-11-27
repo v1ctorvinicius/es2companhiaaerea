@@ -1,17 +1,13 @@
-package com.example.companhiaaerea.adapters.out.repositories.entities;
+package com.example.companhiaaerea.passageiro.adapters.out.repositories.entities;
 
-import com.example.companhiaaerea.application.core.domain.Passageiro;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import com.example.companhiaaerea.passageiro.application.core.domain.Passageiro;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @Data
@@ -21,6 +17,7 @@ import java.util.List;
 @Table(name = "passageiro")
 public class PassageiroEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate dataNascimento;
     private String telefone1;
@@ -28,7 +25,6 @@ public class PassageiroEntity {
 
     public static PassageiroEntity from(Passageiro passageiro){
         return PassageiroEntity.builder()
-                .id(null)
                 .dataNascimento(passageiro.getDataNascimento())
                 .telefone1(passageiro.getTelefone1())
                 .telefone2(passageiro.getTelefone2())
@@ -36,4 +32,12 @@ public class PassageiroEntity {
     }
 
 
+    public static Passageiro toDomain(PassageiroEntity passageiro){
+        return Passageiro.builder()
+
+                .dataNascimento(passageiro.getDataNascimento())
+                .telefone1(passageiro.getTelefone1())
+                .telefone2(passageiro.getTelefone2())
+                .build();
+    }
 }

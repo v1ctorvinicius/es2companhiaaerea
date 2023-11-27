@@ -1,4 +1,4 @@
-package com.example.companhiaaerea.adapters.in;
+package com.example.companhiaaerea.health.adapters.in;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

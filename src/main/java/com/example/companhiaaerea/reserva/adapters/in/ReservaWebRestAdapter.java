@@ -2,7 +2,7 @@ package com.example.companhiaaerea.reserva.adapters.in;
 
 import com.example.companhiaaerea.reserva.application.core.domain.Reserva;
 import com.example.companhiaaerea.reserva.application.ports.in.ListarReservasInputPort;
-import com.example.companhiaaerea.application.ports.in.ReservarVooInputPort;
+import com.example.companhiaaerea.reserva.application.ports.in.ReservarVooInputPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/reservas")
-public class ReservaController {
+public class ReservaWebRestAdapter {
     private final ReservarVooInputPort fazerReservaInputPort;
     private final ListarReservasInputPort listarReservasInputPort;
 

@@ -1,7 +1,7 @@
 package com.example.companhiaaerea.reserva.adapters.out.repositories.entities;
 
 
-import com.example.companhiaaerea.adapters.out.repositories.entities.PassageiroEntity;
+import com.example.companhiaaerea.passageiro.adapters.out.repositories.entities.PassageiroEntity;
 import com.example.companhiaaerea.reserva.application.core.domain.Reserva;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,6 +18,8 @@ import lombok.NoArgsConstructor;
 public class ReservaEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private Integer assento;
 

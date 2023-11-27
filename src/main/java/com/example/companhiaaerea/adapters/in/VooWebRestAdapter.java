@@ -1,4 +1,4 @@
 package com.example.companhiaaerea.adapters.in;
 
-public class VooController {
+public class VooWebRestAdapter {
 }

@@ -1,7 +1,7 @@
 package com.example.companhiaaerea.application.core.usecases;
 
 import com.example.companhiaaerea.reserva.application.core.domain.Reserva;
-import com.example.companhiaaerea.application.ports.in.ReservarVooInputPort;
+import com.example.companhiaaerea.reserva.application.ports.in.ReservarVooInputPort;
 import org.springframework.stereotype.Service;
 
 @Service
