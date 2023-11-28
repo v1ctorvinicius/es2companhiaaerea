@@ -2,14 +2,13 @@ package com.example.companhiaaerea.passageiro.application.core.domain;
 
 import com.example.companhiaaerea.pessoa.application.core.domain.Pessoa;
 import com.example.companhiaaerea.passageiro.adapters.out.database.entities.PassageiroEntity;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDate;
 
-@Data
+@Getter
 @Builder
+@NoArgsConstructor
 @AllArgsConstructor
 public class Passageiro extends Pessoa {
     private Long id;
