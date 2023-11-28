@@ -1,7 +1,7 @@
-package com.example.companhiaaerea.reserva.adapters.out.repositories.entities;
+package com.example.companhiaaerea.reserva.adapters.out.repositories.database;
 
 
-import com.example.companhiaaerea.passageiro.adapters.out.repositories.entities.PassageiroEntity;
+import com.example.companhiaaerea.passageiro.adapters.out.database.entities.PassageiroEntity;
 import com.example.companhiaaerea.reserva.application.core.domain.Reserva;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

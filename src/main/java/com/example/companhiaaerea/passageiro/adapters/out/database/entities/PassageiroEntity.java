@@ -1,4 +1,4 @@
-package com.example.companhiaaerea.passageiro.adapters.out.repositories.entities;
+package com.example.companhiaaerea.passageiro.adapters.out.database.entities;
 
 import com.example.companhiaaerea.passageiro.application.core.domain.Passageiro;
 import jakarta.persistence.*;
@@ -22,22 +22,20 @@ public class PassageiroEntity {
     private LocalDate dataNascimento;
     private String telefone1;
     private String telefone2;
+    private String cpf;
+    private String nome;
+    private String sexo;
 
     public static PassageiroEntity from(Passageiro passageiro){
         return PassageiroEntity.builder()
+                .id(passageiro.getId())
                 .dataNascimento(passageiro.getDataNascimento())
                 .telefone1(passageiro.getTelefone1())
                 .telefone2(passageiro.getTelefone2())
+                .cpf(passageiro.getCpf())
+                .nome(passageiro.getNome())
+                .sexo(passageiro.getSexo())
                 .build();
     }
 
-
-    public static Passageiro toDomain(PassageiroEntity passageiro){
-        return Passageiro.builder()
-
-                .dataNascimento(passageiro.getDataNascimento())
-                .telefone1(passageiro.getTelefone1())
-                .telefone2(passageiro.getTelefone2())
-                .build();
-    }
 }

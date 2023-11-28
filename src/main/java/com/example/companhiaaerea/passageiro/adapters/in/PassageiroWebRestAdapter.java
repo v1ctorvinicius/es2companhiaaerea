@@ -12,19 +12,20 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/passageiros")
+@RequestMapping("/passageiro")
 @RequiredArgsConstructor
 public class PassageiroWebRestAdapter {
+
     private final ListarPassageirosInputPort listarPassageirosInputPort;
     private final CadastrarPassageiroInputPort cadastrarPassageiroInputPort;
 
     @GetMapping
-    public ResponseEntity<List<Passageiro>> listarPassageiros(){
+    public ResponseEntity<List<Passageiro>> listarPassageiros() {
         return ResponseEntity.ok(listarPassageirosInputPort.execute());
     }
 
     @PostMapping
-    public ResponseEntity<Passageiro> cadastrarPassageiro(@RequestBody Passageiro passageiro){
+    public ResponseEntity<Passageiro> cadastrarPassageiro(@RequestBody Passageiro passageiro) {
         return ResponseEntity.status(HttpStatus.CREATED).body(cadastrarPassageiroInputPort.execute(passageiro));
     }
 }

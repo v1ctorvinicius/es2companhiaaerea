@@ -1,6 +1,6 @@
 package com.example.companhiaaerea.passageiro.application.core.usecases;
 
-import com.example.companhiaaerea.passageiro.adapters.out.repositories.entities.PassageiroEntity;
+import com.example.companhiaaerea.passageiro.adapters.out.database.entities.PassageiroEntity;
 import com.example.companhiaaerea.passageiro.application.core.domain.Passageiro;
 import com.example.companhiaaerea.passageiro.application.ports.in.ListarPassageirosInputPort;
 import com.example.companhiaaerea.passageiro.application.ports.out.ListarPassageirosOutputPort;
@@ -17,7 +17,10 @@ public class ListarPassageirosUC implements ListarPassageirosInputPort {
 
     @Override
     public List<Passageiro> execute(){
-        var passageiros = listarPassageirosOutputPort.execute();
-        return  listarPassageirosOutputPort.execute().stream().map(PassageiroEntity::toDomain).toList();
+        List<Passageiro> passageiros =  listarPassageirosOutputPort.execute().stream().map(
+                passageiroEntity -> Passageiro.from(passageiroEntity)
+        ).toList();
+
+        return passageiros;
     }
 }

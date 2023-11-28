@@ -1,4 +1,4 @@
-package com.example.companhiaaerea.application.core.usecases;
+package com.example.companhiaaerea.reserva.application.core.usecases;
 
 import com.example.companhiaaerea.reserva.application.core.domain.Reserva;
 import com.example.companhiaaerea.reserva.application.ports.in.ReservarVooInputPort;

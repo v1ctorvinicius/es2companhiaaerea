@@ -1,6 +1,6 @@
 package com.example.companhiaaerea.reserva.application.ports.out;
 
-import com.example.companhiaaerea.reserva.adapters.out.repositories.entities.ReservaEntity;
+import com.example.companhiaaerea.reserva.adapters.out.repositories.database.ReservaEntity;
 
 import java.util.List;
 

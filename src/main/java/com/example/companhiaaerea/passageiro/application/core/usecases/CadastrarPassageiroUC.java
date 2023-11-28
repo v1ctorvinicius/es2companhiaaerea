@@ -1,6 +1,6 @@
 package com.example.companhiaaerea.passageiro.application.core.usecases;
 
-import com.example.companhiaaerea.passageiro.adapters.out.repositories.entities.PassageiroEntity;
+import com.example.companhiaaerea.passageiro.adapters.out.database.entities.PassageiroEntity;
 import com.example.companhiaaerea.passageiro.application.core.domain.Passageiro;
 import com.example.companhiaaerea.passageiro.application.ports.in.CadastrarPassageiroInputPort;
 import com.example.companhiaaerea.passageiro.application.ports.out.CadastrarPassageiroOutputPort;

@@ -1,6 +1,6 @@
 package com.example.companhiaaerea.passageiro.application.ports.out;
 
-import com.example.companhiaaerea.passageiro.adapters.out.repositories.entities.PassageiroEntity;
+import com.example.companhiaaerea.passageiro.adapters.out.database.entities.PassageiroEntity;
 
 public interface CadastrarPassageiroOutputPort {
 
